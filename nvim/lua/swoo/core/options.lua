@@ -1,12 +1,13 @@
 local opt = vim.opt
+opt.mouse = "a"
 
 -- line numbers
 opt.relativenumber = true
 opt.number = true
 
 -- tabs & indent
-opt.tabstop = 2
-opt.shiftwidth = 2
+opt.tabstop = 4
+opt.shiftwidth = 4
 opt.expandtab = true
 opt.autoindent = true
 
@@ -36,5 +37,3 @@ opt.splitright = true
 opt.splitbelow = true
 
 opt.iskeyword:append("-")
-
-
