@@ -13,9 +13,7 @@ local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 null_ls.setup({
 	sources = {
-		formatting.black,
-		formatting.prettierd,
-		formatting.stylua,
+        formatting.goimports,
 		diagnostics.jsonlint,
 	},
 	-- you can reuse a shared lspconfig on_attach callback here
@@ -27,7 +25,7 @@ null_ls.setup({
 				buffer = bufnr,
 				callback = function()
 					-- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
-					vim.lsp.buf.formatting_sync()
+					vim.lsp.buf.format()
 				end,
 			})
 		end

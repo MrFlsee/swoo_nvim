@@ -28,9 +28,7 @@ mason_lspconfig.setup({
 
 mason_null_ls.setup({
 	-- list of formatters & linters for mason to install
-	ensure_installed = {
-		"stylua",
-	},
+    ensure_installed = {},
 	-- auto-install configured formatters & linters (with null-ls)
 	automatic_installation = true,
 })
